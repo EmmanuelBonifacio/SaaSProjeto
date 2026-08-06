@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="PT-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard do SaaS</title>
+  </head>
+  <link rel="stylesheet" href="paginaDasboard.css" />
+  <body>
+    <aside class="sidebar">
+      <h2>DASHBOARD</h2>
+      <ul>
+        <li>Dashboard</li>
+        <li>Clientes</li>
+        <li>Modulos</li>
+        <li>Messages</li>
+        <li>Sair</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Bem-vindo, Dannyrooh</h1>
+      </header>
+
+      <section class="kpis">
+        <div class="card">
+          Clientes: <span>1,456</span> <small>(+6.5%)</small>
+        </div>
+        <div class="card">
+          Receita: <span>$3,345</span> <small>(-0.10%)</small>
+        </div>
+        <div class="card">Lucro: <span>60%</span> <small>(-0.2%)</small></div>
+        <div class="card">
+          Faturas: <span>1,135</span> <small>(+11.5%)</small>
+        </div>
+      </section>
+
+      <section class="charts">
+        <div class="chart">
+          <h2>Estatísticas de Faturas</h2>
+          <ul>
+            <li>Total Pago: 234 (27.4%)</li>
+            <li>Total Vencido: 514 (40%)</li>
+            <li>Total Não Pago: 345 (38.6%)</li>
+          </ul>
+        </div>
+        <div class="chart">
+          <h2>Tendência de Receita</h2>
+          <p>Exemplo de gráfico de linha (placeholder)</p>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <h2>Faturas Recentes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>No. Cliente</th>
+              <th>Nome</th>
+              <th>Item</th>
+              <th>Data</th>
+              <th>Status</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>#602001</td>
+              <td>Eren Yeager</td>
+              <td>1x Black Backspace</td>
+              <td>21/07/2022 08:23</td>
+              <td>Pago</td>
+              <td>$101</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>#602002</td>
+              <td>Eren Yeager</td>
+              <td>1x Black Backspace</td>
+              <td>21/07/2022 08:23</td>
+              <td>Pago</td>
+              <td>$144</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>#602003</td>
+              <td>Eren Yeager</td>
+              <td>1x Black Backspace</td>
+              <td>21/07/2022 08:23</td>
+              <td>Pendente</td>
+              <td>$121</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>#602004</td>
+              <td>Eren Yeager</td>
+              <td>1x Black Backspace</td>
+              <td>21/07/2022 08:23</td>
+              <td>Vencido</td>
+              <td>$300</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+  <script src="paginaDasboard.js"></script>
+</html>
