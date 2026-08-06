@@ -7,7 +7,7 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-// Função para salvar cliente
+// Função para salvar cliente (cria o card na lista)
 function salvarCliente() {
   const nome = document.getElementById("nome").value;
   const nomeEmpresa = document.getElementById("nomeEmpresa").value;
@@ -29,15 +29,16 @@ function salvarCliente() {
         <button class="btn-delete">Excluir</button>
       </div>
       <div class="formulario">
-        <p>Email: ${email}</p>
-        <p>Telefone: ${telefone}</p>
-        <p>Endereço: ${endereco}</p>
-        <textarea placeholder="Observações"></textarea>
+        <input type="text" class="email" placeholder="Email" value="${email}" />
+        <input type="text" class="telefone" placeholder="Telefone" value="${telefone}" />
+        <input type="text" class="endereco" placeholder="Endereço" value="${endereco}" />
+        <input type="number" class="modulos" placeholder="Módulos" />
+        <input type="text" class="mensalidade" placeholder="Mensalidade" />
+        <textarea class="observacao" placeholder="Observações"></textarea>
         <button class="btn-save-extra">Salvar Dados</button>
       </div>
     `;
 
-    // Adiciona o cliente na lista
     lista.appendChild(clienteDiv);
 
     // Lógica da seta (abrir/fechar formulário)
@@ -53,6 +54,25 @@ function salvarCliente() {
       clienteDiv.remove();
     });
 
+    // Lógica do salvar dados extras (editar/atualizar informações)
+    const salvarExtra = clienteDiv.querySelector(".btn-save-extra");
+    salvarExtra.addEventListener("click", () => {
+      const emailNovo = clienteDiv.querySelector(".email").value;
+      const telefoneNovo = clienteDiv.querySelector(".telefone").value;
+      const enderecoNovo = clienteDiv.querySelector(".endereco").value;
+      const modulosNovo = clienteDiv.querySelector(".modulos").value;
+      const mensalidadeNovo = clienteDiv.querySelector(".mensalidade").value;
+      const observacaoNova = clienteDiv.querySelector(".observacao").value;
+
+      alert(`Informações atualizadas:
+Email: ${emailNovo}
+Telefone: ${telefoneNovo}
+Endereço: ${enderecoNovo}
+Módulos: ${modulosNovo}
+Mensalidade: ${mensalidadeNovo}
+Observações: ${observacaoNova}`);
+    });
+
     // Limpa os campos do modal
     document.getElementById("nome").value = "";
     document.getElementById("nomeEmpresa").value = "";
@@ -60,7 +80,6 @@ function salvarCliente() {
     document.getElementById("telefone").value = "";
     document.getElementById("endereco").value = "";
 
-    // Fecha o modal
     closeModal();
   } else {
     alert("Preencha todos os campos!");
