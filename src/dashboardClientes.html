@@ -17,6 +17,30 @@
         <li>Sair</li>
       </ul>
     </aside>
+    <main>
+      <div class="container">
+        <h1>Clientes</h1>
+        <button class="btn-add" onclick="openModal()">
+          + Adicionar Cliente
+        </button>
+        <div id="lista-clientes"></div>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <button class="btn-close" onclick="closeModal()">X</button>
+          <h2>Cadastrar Cliente</h2>
+          <input type="text" id="nome" placeholder="Nome" />
+          <input type="text" id="nomeEmpresa" placeholder="Nome da Empresa" />
+          <input type="email" id="email" placeholder="E-mail" />
+          <input type="text" id="telefone" placeholder="Telefone" />
+          <input type="text" id="endereco" placeholder="Endereço" />
+
+          <button class="btn-save" onclick="salvarCliente()">Salvar</button>
+        </div>
+      </div>
+    </main>
   </body>
-  <script src="dashboard.js"></script>
+  <script src="dashboardClientes.js"></script>
 </html>

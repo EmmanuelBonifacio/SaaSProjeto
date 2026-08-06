@@ -1,10 +1,13 @@
+/* Layout geral */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  display: flex;
+  display: flex; /* coloca sidebar e main lado a lado */
   background: #f4f6f9;
+  height: 100vh; /* ocupa toda a altura da tela */
 }
 
+/* Sidebar (menu lateral) */
 .sidebar {
   width: 220px;
   background: #1f2a40;
@@ -29,4 +32,129 @@ body {
 
 .sidebar ul li:hover {
   background: #2e3b55;
+}
+
+/* Área principal */
+main {
+  flex: 1; /* ocupa todo o espaço restante ao lado da sidebar */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  height: 100vh; /* altura total */
+  overflow: hidden; /* evita scroll duplo */
+}
+
+/* Container de clientes */
+.container {
+  flex: 1; /* ocupa toda a área dentro do main */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+/* Botão adicionar */
+.btn-add {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+.btn-add:hover {
+  background: #0056b3;
+}
+
+/* Lista de clientes */
+#lista-clientes {
+  flex: 1; /* ocupa todo o espaço restante */
+  overflow-y: auto; /* scroll se tiver muitos clientes */
+  padding-right: 10px;
+}
+
+.cliente {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.cliente span {
+  font-weight: bold;
+}
+
+/* Botão excluir */
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background: #a71d2a;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.modal-content h2 {
+  margin-top: 0;
+}
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-save {
+  background: #28a745;
+  color: white;
+}
+.btn-save:hover {
+  background: #1e7e34;
+}
+.btn-close {
+  background: #6c757d;
+  color: white;
+  float: right;
+}
+.btn-close:hover {
+  background: #5a6268;
 }
