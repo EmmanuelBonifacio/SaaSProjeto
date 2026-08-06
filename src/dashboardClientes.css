@@ -158,3 +158,14 @@ h1 {
 .btn-close:hover {
   background: #5a6268;
 }
+
+.formulario {
+  display: none; /* começa escondido */
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.formulario.aberto {
+  display: block; /* aparece quando abre */
+}

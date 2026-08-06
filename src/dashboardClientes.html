@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagina Clientes</title>
+    <link rel="stylesheet" href="dashboardClientes.css" />
   </head>
-  <link rel="stylesheet" href="dashboardClientes.css" />
   <body>
+    <!-- Menu lateral -->
     <aside class="sidebar">
       <h2>DASHBOARD</h2>
       <ul>
@@ -17,16 +18,21 @@
         <li>Sair</li>
       </ul>
     </aside>
+
+    <!-- Conteúdo principal -->
     <main>
       <div class="container">
         <h1>Clientes</h1>
+        <!-- Botão para abrir modal -->
         <button class="btn-add" onclick="openModal()">
           + Adicionar Cliente
         </button>
+
+        <!-- Lista de clientes (começa vazia) -->
         <div id="lista-clientes"></div>
       </div>
 
-      <!-- Modal -->
+      <!-- Modal de cadastro -->
       <div id="modal" class="modal">
         <div class="modal-content">
           <button class="btn-close" onclick="closeModal()">X</button>
@@ -41,6 +47,8 @@
         </div>
       </div>
     </main>
+
+    <!-- Script -->
+    <script src="dashboardClientes.js"></script>
   </body>
-  <script src="dashboardClientes.js"></script>
 </html>
